@@ -4,7 +4,7 @@
       <swiper-item v-for="(item,index) in banners" :key="index">
         <!-- 因为要用到变量里的某个属性所有要动态绑定 -->
         <a :href="item.link">
-          <img :src="item.image" alt="" />
+          <img :src="item.image" alt="" @load="imageLoad"/>
         </a>
       </swiper-item>
     </swiper>
@@ -24,10 +24,23 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      isLoad: false
+    }
+  },
   components: {
     Swiper,
     SwiperItem,
   },
+  methods: {
+    imageLoad() {
+      if (!this.isLoad) {
+      this.$emit('swiperImageLoad')
+      this.isLoad = true
+      }
+    }
+  }
 };
 </script>
 

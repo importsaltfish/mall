@@ -12,9 +12,10 @@
 
 <style scoped>
   #tab-bar {
+    z-index: 999;
     display: flex;
     background-color: #f6f6f6;
-
+    
     position: fixed;
     left: 0;
     right: 0;
