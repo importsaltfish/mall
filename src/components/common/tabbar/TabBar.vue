@@ -6,13 +6,14 @@
 
 <script>
   export default {
-    name: "TabBar"
+    name: "TabBar",
+    
   }
 </script>
 
 <style scoped>
   #tab-bar {
-    z-index: 999;
+    z-index: 2;
     display: flex;
     background-color: #f6f6f6;
     
@@ -23,4 +24,5 @@
 
     box-shadow: 0 -1px 1px rgba(100,100,100,.2);
   }
+  
 </style>
